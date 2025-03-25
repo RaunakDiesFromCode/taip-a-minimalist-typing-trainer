@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 // import { format } from "date-fns";
 import { cn } from "@/lib/utils";
-import { logoFont } from "@/app/fonts";
+import { bodyFont1, logoFont } from "@/app/fonts";
 
 const Navbar = () => {
   const { theme, setTheme } = useTheme();
@@ -20,7 +20,7 @@ const Navbar = () => {
       {/* Logo */}
       <Link className="text-4xl w-fit" href={"/"}>
         t<span className="italic text-blue-400 -ml-1.5">a</span>ip
-        <span className="text-sm -ml-0.5 text-foreground/70">.com</span>
+        <span className={cn("text-sm -ml-1 text-foreground/70 font-bold", bodyFont1.className)}>.com</span>
       </Link>
 
       {/* Right Section (Theme Toggle + Time + Socials) */}
