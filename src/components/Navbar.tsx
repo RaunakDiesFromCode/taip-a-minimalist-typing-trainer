@@ -19,7 +19,7 @@ const Navbar = () => {
     >
       {/* Logo */}
       <Link className="text-4xl w-fit" href={"/"}>
-        t<span className="italic text-blue-400 -ml-1.5">a</span>ip
+        t<span className="italic text-blue-400 -ml-1.5">a</span>iip
         <span className={cn("text-sm -ml-1 text-foreground/70 font-bold", bodyFont1.className)}>.com</span>
       </Link>
 
