@@ -206,8 +206,12 @@ const TypingHighlighter: React.FC<Props> = React.memo(
                 <SelectGroup>
                   <SelectLabel>Difficulty</SelectLabel>
                   {difficultyLevels.map((level) => (
-                    <SelectItem key={level.value} value={level.value}>
-                      {level.label}
+                    <SelectItem key={level.value} value={level.value} className={level.label === "Death" ? "text-red-500" : ""}>
+                      {level.label === "Death" ? (
+                        <span className="text-red-500">{level.label}</span>
+                      ) : (
+                        level.label
+                      )}
                     </SelectItem>
                   ))}
                 </SelectGroup>

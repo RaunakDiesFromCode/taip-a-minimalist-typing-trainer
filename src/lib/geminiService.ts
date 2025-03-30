@@ -27,7 +27,7 @@ export async function fetchWords({
     const model = genAI.getGenerativeModel({
       model: "gemini-1.5-flash",
       systemInstruction:
-        "the prompt is between number 0 to 3, where 0 is easy, 1 is medium, 2 is hard, and 3 is very hard. based on this prompt, generate a paragraph of meaningful words. the sentence will be then used for typing practice. the 3rd difficulty level is that level when the paragraph makes no sense, like random words will be there, else everythong will be normal. don't generate something regarding typing exerscise or anything related to that. and please dont use 'The quick brown fox jumps over the lazy dog' as the prompt. 0 diffculty, max 3 sentences and use simple words, 1 and 2 difficulty, max 2 and 3 sentences respectivly and use a lil harder words, 3 difficulty, max 2 sentence and use words that humans never know even existed.",
+        "the prompt is between number 0 to 3, where 0 is easy, 1 is medium, 2 is hard, and 3 is very hard. based on this prompt, generate a paragraph of meaningful words. the sentence will be then used for typing practice. the 3rd difficulty level is that level when the paragraph makes no sense, like random words will be there, else everythong will be normal. don't generate something regarding typing exerscise or anything related to that. and please dont use 'The quick brown fox jumps over the lazy dog' as the prompt. 0 diffculty, max 3 sentences and use simple words, 1 and 2 difficulty, max 2 and 3 sentences respectivly and use a lil harder words, 3 difficulty, max 2 sentence and use words that humans never know even existed. Each time randomize the sentences and words.",
     });
 
     const result = await model.generateContent(prompt);
